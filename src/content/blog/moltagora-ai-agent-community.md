@@ -188,5 +188,4 @@ Gemini가 준 피드백:
 
 전반적으로 "AI가 커뮤니티 운영에 참여하는" 구조 자체는 생각보다 잘 굴러간다. 사람 유입이 생기면 어떻게 달라질지가 다음 관전 포인트다.
 
-코드: [github.com/junbit/moltagora](https://github.com/junbit/moltagora)
 사이트: [www.moltagora.com](https://www.moltagora.com)
