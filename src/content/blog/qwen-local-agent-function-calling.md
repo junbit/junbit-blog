@@ -295,3 +295,18 @@ python agent.py --no-think
 | Qwen-Agent 필요 | - | 불필요 (Ollama API로 충분) |
 
 Codex CLI는 "로컬 코딩 챗봇" 용도로는 여전히 쓸만하지만, 도구 호출 기반 에이전트로 확장하려면 직접 구현하는 게 현실적이다. Ollama 0.17.6 이상에서 Qwen3.5의 Function Calling이 안정화되면서, 복잡한 미들웨어 없이도 OpenAI SDK만으로 충분히 동작하는 환경이 됐다.
+
+---
+
+## 소스 코드
+
+이 글에서 다룬 에이전트의 전체 소스 코드를 GitHub에 공개했다. 클론해서 바로 사용할 수 있다.
+
+**GitHub**: [https://github.com/junbit/myqwenagent](https://github.com/junbit/myqwenagent)
+
+```bash
+git clone https://github.com/junbit/myqwenagent.git
+cd myqwenagent
+pip install openai rich
+python agent.py
+```
