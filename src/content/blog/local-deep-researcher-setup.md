@@ -228,3 +228,20 @@ qwen3.5:27b-q4_K_M도 있지만 쓸 이유가 없다:
 | 사용법 | `research "주제"` |
 
 thinking 모델 + JSON mode 충돌이라는 예상치 못한 삽질이 있었지만, 해결하고 나니 로컬 LLM의 실용적인 활용법을 하나 더 확보한 셈이다. 탭 20개 열어가며 30분 쓸 일을 터미널 한 줄로 2분에 끝낼 수 있다.
+
+---
+
+## 부록: 실제 리서치 결과물
+
+아래는 `research "연구자 테자스 람다스와 마틴 웰스가 논문 선도 거래: 시장의 미래 가격 움직임을 예측하는 데 영향력 있는 거래의 특징 에서 이러한 신호를 식별하는 방법 요약"` 명령으로 생성된 리포트 원문이다. 약 2분 소요, 편집 없이 그대로 붙여넣었다.
+
+> 연구자 테자스 람다스와 마틴 웰스의 논문 '선도 거래: 시장의 미래 가격 움직임을 예측하는 데 영향력 있는 거래의 특징'은 과거 데이터와 시장 요인을 기반으로 미래 가격 변화를 예측하는 핵심 개념을 다룹니다. 이 연구는 특정 거래 패턴이나 신호가 시장 참여자들의 행동을 반영하여 향후 가격 흐름을 선도할 수 있음을 강조합니다. 이를 식별하기 위해서는 먼저 과거 가격 데이터를 수집하고 전처리하는 과정이 필수적이며, 선 차트나 산점도 등을 활용한 탐색적 데이터 분석 (EDA) 을 통해 시간 경과에 따른 변동과 다양한 요인 간의 상관관계를 파악해야 합니다.
+>
+> 논문에서 제시된 신호를 효과적으로 포착하고 예측 모델을 구축하기 위해서는 단순한 통계적 분석을 넘어 머신러닝 및 AI 기법의 적용이 중요합니다. 예를 들어, LSTM(장단기 메모리) 과 같은 딥러닝 모델은 과거 가격 데이터뿐만 아니라 거래량과 뉴스 정서 등 비정형 데이터를 함께 학습하여 숨겨진 패턴을 찾아냅니다. 또한, 변동성 클러스터링을 설명하는 GARCH 모델이나 이동 평균, RSI 와 같은 기술적 지표를 결합한 앙상블 방법 (배깅, 부스팅, 스태킹) 을 사용하여 개별 모델의 약점을 보완하고 예측 정확도를 높일 수 있습니다. 이러한 접근법은 비트코인 등 암호화폐나 주식 시장에서 단기 추세를 예측하는 데 활용될 수 있으며, 최종적으로는 모델 성능을 평가하여 미래 가격 변화와 추세를 보다 정밀하게 예측하는 능력을 향상시킵니다.
+>
+> 최근 연구 동향을 살펴보면, 고빈도 주가 예측 분야에서 딥러닝 아키텍처의 성능 비교 결과가 주목받고 있습니다. 이러한 맥락에서 주의력 기반 (attention-based) 구조, 특히 트랜스포머 (Transformers) 가 순환 신경망이나 합성곱 신경망과 같은 기존 모델보다 일관되게 우수한 성능을 보인다는 연구 결과가 제시되고 있습니다. 이는 복잡한 시장 데이터 간의 장기 의존성을 효과적으로 포착할 수 있는 트랜스포머 아키텍처가 선도 거래 신호를 식별하고 미래 가격 움직임을 예측하는 데 있어 더 강력한 도구로 부상하고 있음을 시사합니다. 특히, 본 논문에서 언급된 신호 식별 및 예측 접근법에는 로컬 레벨 상태 공간 칼만 필터와 LSTM 신경망을 결합한 하이브리드 예보 방식을 포함하여 다양한 모델의 장점을 통합하려는 노력이 이루어지고 있습니다.
+
+**Sources:**
+- [가격 예측 분석 - FasterCapital](https://fastercapital.com/ko/content/%EA%B0%80%EA%B2%A9-%EC%98%88%EC%B8%A1-%EB%B6%84%EC%84%9D--%EA%B3%BC%EA%B1%B0-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B0%8F-%EC%8B%9C%EC%9E%A5-%EC%9A%94%EC%9D%B8%EC%9D%84-%EA%B8%B0%EB%B0%98%EC%9C%BC%EB%A1%9C-%EB%AF%B8%EB%9E%98-%EA%B0%80%EA%B2%A9-%EB%B3%80%ED%99%94-%EB%B0%8F-%EC%B6%94%EC%84%B8%EB%A5%BC-%EC%98%88%EC%B8%A1%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95.html)
+- [Deep Learning Architectures for High-Frequency Stock Price Prediction - ResearchGate](https://www.researchgate.net/publication/395995775_Deep_Learning_Architectures_for_High-Frequency_Stock_Price_Prediction_An_Empirical_Evaluation)
+- [Attention mechanisms of the Transformer architectures - ResearchGate](https://www.researchgate.net/figure/Attention-mechanisms-of-the-Transformer-architectures-used-in-this-study-a-Vanilla_fig1_389453974)
