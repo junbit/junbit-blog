@@ -74,6 +74,40 @@ tags: ["llm", "qwen", "local-ai", "automation", "python", "stock", "github"]
 
 ---
 
+## 실제 생성 결과 예시
+
+말로만 설명하면 감이 잘 안 올 수 있어서, 오늘 아침 내가 실제로 받아본 리포트 일부를 예시로 붙여본다.
+
+아래 내용은 2026-03-23 장 마감 데이터를 기준으로 2026-03-24 오전에 생성된 결과다.
+
+### 주도주 TOP
+
+| 순위 | 종목명 | 시장 | 상승률 | 거래대금 |
+|------|--------|------|--------|----------|
+| 1 | 한텍 | KOSDAQ | +25.68% | 1,522억 |
+| 2 | 차백신연구소 | KOSDAQ | +29.90% | 1,337억 |
+| 3 | 에코플라스틱 | KOSDAQ | +29.90% | 1,166억 |
+| 4 | KEC | KOSPI | +21.18% | 1,162억 |
+
+### 종목별 요약 예시
+
+#### 차백신연구소
+
+> 차바이오그룹이 자회사인 차백신연구소를 소룩스에 매각하는 사업 재편 소식이 발표되었습니다. 이에 따라 지배구조 개선과 향후 성장성 기대감이 반영되어 주가가 29.9% 급등하며 상한가 마감했습니다.
+
+관련 뉴스도 함께 붙는다.
+
+- [[주식] 소룩스 매각된 '차백신연구소'...주가 30% 급등](https://news.google.com/rss/articles/CBMia0FVX3lxTE1SRE01QU41X3VkUjIxY2J2ejcwU3FrNVdJU2VDN0ZINW15LTJLbUptSlowMXItRXBTNjlxWUxidmN2NmkzSmlDZGd3MTJUaF9SZzluR2lvd3F6c0JpaVo2cHRJUXlkbFlueHpR?oc=5)
+- [[특징주] 차백신연구소, 지배구조 재편 기대감에 상한가 마감](https://news.google.com/rss/articles/CBMibEFVX3lxTFBvaDQxbG9TTnhaQ216MzNuTmNIY2l4YTFvdXNsZFMtdmFCcXFnbExMYjY3N3FWTjFjb3BIVWhselNnRFhIMGhET2lVRWhFRzltaWZLZHdGREh6Z2NxU3ZubXJxd1pZY0lhZnpZVQ?oc=5)
+
+### 시장 전체 요약
+
+> 오늘 시장은 친환경 소재와 탈플라스틱 테마가 강력한 상승세를 주도하며 거래대금이 집중되는 흐름을 보였습니다. 특히 생분해성 플라스틱 관련주인 한텍, 차백신연구소, 에코플라스틱이 20% 이상 급등하며 시장 주도를 이끌었습니다.
+
+이 정도면 아침에 메일 하나만 읽어도 "어제 시장에서 뭐가 강했고, 왜 올랐는지"를 빠르게 훑을 수 있다. 내가 원했던 것도 정확히 이 정도 수준의 요약이었다.
+
+---
+
 ## 공개한 이유
 
 로컬 LLM 관련 글을 쓰다 보면 벤치마크나 세팅 이야기는 많은데, 정작 **실무나 개인 루틴에 붙여서 돌아가는 예시**는 상대적으로 적다.
