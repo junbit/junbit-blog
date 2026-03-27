@@ -1,6 +1,6 @@
 ---
-title: "Nemotron 3 Super로 자동매매 프로그램 키움증권 API 전환 후기"
-description: "엔비디아의 오픈소스 로컬 모델 Nemotron 3 Super를 OpenCode에서 무료로 활용해 자동매매 프로그램의 증권사 API를 전환한 실전 작업 후기"
+title: "Nemotron 3 Super 120B 실전 코딩 리뷰 - 키움증권 API 전환 사례"
+description: "엔비디아 Nemotron 3 Super 120B를 OpenCode에서 무료로 활용해 자동매매 프로그램의 키움증권 API를 전환한 실전 코딩 성능 리뷰."
 pubDate: 2026-03-21
 tags: ["nemotron", "opencode", "자동매매", "로컬모델", "LLM", "키움증권", "AI코딩"]
 ---

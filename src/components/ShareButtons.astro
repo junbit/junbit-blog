@@ -1,0 +1,71 @@
+---
+interface Props {
+	title: string;
+	url: string;
+}
+
+const { title, url } = Astro.props;
+const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+---
+
+<div class="share-buttons">
+	<span class="share-label">공유하기</span>
+	<a href={twitterUrl} target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="X(Twitter)에 공유">
+		<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+			<path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+		</svg>
+	</a>
+	<button class="share-btn copy-link" aria-label="링크 복사" data-url={url}>
+		<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+			<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+		</svg>
+	</button>
+</div>
+
+<script>
+	document.querySelectorAll('.copy-link').forEach(btn => {
+		btn.addEventListener('click', async () => {
+			const url = (btn as HTMLElement).dataset.url;
+			if (url) {
+				await navigator.clipboard.writeText(url);
+				const original = btn.innerHTML;
+				btn.innerHTML = '<span style="font-size:0.8em">✓ 복사됨</span>';
+				setTimeout(() => { btn.innerHTML = original; }, 2000);
+			}
+		});
+	});
+</script>
+
+<style>
+	.share-buttons {
+		display: flex;
+		align-items: center;
+		gap: 0.6em;
+		margin-top: 2em;
+		padding-top: 1.5em;
+		border-top: 1px solid rgb(var(--gray-light));
+	}
+	.share-label {
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+		margin-right: 0.3em;
+	}
+	.share-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: rgba(var(--gray-light), 0.5);
+		color: rgb(var(--gray-dark));
+		text-decoration: none;
+		border: none;
+		cursor: pointer;
+		transition: background 0.2s, color 0.2s;
+	}
+	.share-btn:hover {
+		background: var(--accent);
+		color: white;
+	}
+</style>

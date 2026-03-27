@@ -1,6 +1,6 @@
 ---
-title: "Codex CLI 대신 직접 만드는 Qwen 로컬 에이전트 (Ollama + Function Calling)"
-description: "Ollama + OpenAI 호환 API로 Qwen3.5 모델의 Function Calling을 직접 구현하여, Codex CLI의 도구 호출 한계를 넘는 로컬 에이전트를 만드는 과정"
+title: "Qwen3.5 Function Calling 구현 가이드 - Ollama 로컬 에이전트 만들기"
+description: "Ollama + OpenAI 호환 API로 Qwen3.5의 Function Calling을 Python으로 직접 구현하는 방법. Codex CLI의 tool_calls 한계를 넘는 로컬 에이전트 구축."
 pubDate: 2026-03-14
 tags: ["llm", "ollama", "qwen", "agent", "function-calling"]
 ---

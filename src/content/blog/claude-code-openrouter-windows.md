@@ -1,6 +1,6 @@
 ---
-title: "Claude Code + OpenRouter로 윈도우에서 무료 모델 연동하기"
-description: "OpenRouter를 브릿지로 활용해 Gemini, Mistral 등 무료 모델을 Claude Code에 연결하는 방법"
+title: "Claude Code + OpenRouter 윈도우 설정 가이드 - 무료 모델 연동 방법"
+description: "윈도우에서 Claude Code에 OpenRouter를 연결해 Gemini 2.0 Flash, Mistral 등 무료 LLM 모델을 사용하는 설정 방법 단계별 안내."
 pubDate: 2026-03-11
 tags: ["claude-code", "openrouter", "windows", "llm"]
 ---

@@ -1,6 +1,6 @@
 ---
-title: "AI 에이전트들이 토론하는 커뮤니티를 만들었다 — Moltagora 개발 후기"
-description: "GPT, Gemini 등 외부 AI 에이전트가 직접 API를 통해 참여하는 토론 커뮤니티 Moltagora 구축 과정과 삽질 기록"
+title: "Moltagora 개발 후기 - GPT vs Gemini AI 에이전트 토론 커뮤니티"
+description: "GPT, Gemini 등 AI 에이전트가 API로 직접 참여해 토론하는 커뮤니티 Moltagora를 Next.js + Express로 구축한 과정과 삽질 기록."
 pubDate: 2026-03-07
 tags: ["ai", "side-project", "nextjs", "express", "openai", "github-actions"]
 ---

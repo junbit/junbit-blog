@@ -1,6 +1,6 @@
 ---
-title: "로컬 LLM으로 주식 뉴스 자동화 파이프라인 구축하기"
-description: "Mac Mini M4에서 Qwen 27B 모델로 매일 오전 8시 주식 뉴스 보고서를 자동 생성·발송하는 파이프라인을 구축한 과정"
+title: "Qwen 27B로 주식 뉴스 자동 요약 파이프라인 만들기 - Mac Mini M4"
+description: "Mac Mini M4에서 Qwen 27B 로컬 LLM으로 매일 오전 8시 주식 뉴스를 자동 수집·요약·이메일 발송하는 Python 파이프라인 구축 방법."
 pubDate: 2026-03-04
 tags: ["ollama", "python", "automation", "llm", "stock"]
 ---

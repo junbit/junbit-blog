@@ -1,6 +1,6 @@
 ---
-title: "비용 0원, 맥 미니에서 돌아가는 나만의 AI 비서 만들기"
-description: "Mac Mini M4 24GB에서 MLX + Qwen 모델로 메일, 캘린더, 드라이브, 메모까지 관리하는 로컬 AI 에이전트를 만든 전체 과정. 삽질부터 완성까지."
+title: "Mac Mini M4 + MLX + Qwen으로 API 비용 0원 AI 비서 만들기"
+description: "Mac Mini M4 24GB에서 MLX + Qwen 로컬 LLM으로 이메일, 캘린더, Google Drive까지 관리하는 AI 비서 에이전트를 API 비용 0원으로 만든 전체 과정."
 pubDate: 2026-03-16
 tags: ["llm", "mlx", "qwen", "mac-mini", "local-ai", "agent", "google-api", "automation"]
 ---

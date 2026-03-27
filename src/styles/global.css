@@ -123,6 +123,22 @@ blockquote {
 	margin: 0;
 	font-size: 1.333em;
 }
+blockquote:has(strong:first-child) {
+	background: rgba(var(--gray-light), 0.35);
+	border-left: 4px solid var(--accent);
+	border-radius: 0 8px 8px 0;
+	padding: 1em 1.2em;
+	margin: 0 0 2em;
+	font-size: 0.95em;
+	line-height: 1.8;
+}
+blockquote:has(strong:first-child) ul {
+	margin: 0.5em 0 0;
+	padding-left: 1.2em;
+}
+blockquote:has(strong:first-child) li {
+	margin-bottom: 0.3em;
+}
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));

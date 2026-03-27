@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+	currentSlug: string;
+	tags: string[];
+}
+
+const { currentSlug, tags } = Astro.props;
+
+const allPosts = await getCollection('blog');
+const related = allPosts
+	.filter(p => p.id !== currentSlug)
+	.map(p => ({
+		...p,
+		score: p.data.tags.filter(t => tags.includes(t)).length,
+	}))
+	.filter(p => p.score > 0)
+	.sort((a, b) => b.score - a.score || b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
+---
+
+{related.length > 0 && (
+	<nav class="related-posts">
+		<h3>관련 포스트</h3>
+		<ul>
+			{related.map(post => (
+				<li>
+					<a href={`/blog/${post.id}/`}>
+						<span class="related-title">{post.data.title}</span>
+						<span class="related-date"><FormattedDate date={post.data.pubDate} /></span>
+					</a>
+				</li>
+			))}
+		</ul>
+	</nav>
+)}
+
+<style>
+	.related-posts {
+		margin-top: 3em;
+		padding-top: 2em;
+		border-top: 1px solid rgb(var(--gray-light));
+	}
+	.related-posts h3 {
+		font-size: 1.1em;
+		margin-bottom: 0.8em;
+	}
+	.related-posts ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.related-posts li {
+		margin-bottom: 0.6em;
+	}
+	.related-posts a {
+		text-decoration: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1em;
+		color: rgb(var(--gray-dark));
+	}
+	.related-posts a:hover .related-title {
+		color: var(--accent);
+	}
+	.related-title {
+		font-size: 0.92em;
+		line-height: 1.4;
+	}
+	.related-date {
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+</style>

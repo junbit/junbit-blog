@@ -5,15 +5,22 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & {
+	headings?: { depth: number; slug: string; text: string }[];
+	readingTime?: number;
+	slug?: string;
+};
 
-const { title, description, pubDate, updatedDate, heroImage, tags = [] } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, tags = [], headings = [], readingTime, slug = '' } = Astro.props;
 ---
 
 <html lang="ko">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} pubDate={pubDate} updatedDate={updatedDate} />
 		<style>
 			main { width: calc(100% - 2em); max-width: 100%; margin: 0; }
 			.hero-image { width: 100%; }
@@ -28,6 +35,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags = [] } = Astro
 			.title { margin-bottom: 1em; padding: 1em 0; text-align: center; line-height: 1; }
 			.title h1 { margin: 0 0 0.5em 0; }
 			.date { margin-bottom: 0.5em; color: rgb(var(--gray)); }
+		.reading-time { font-size: 0.9em; }
 			.last-updated-on { font-style: italic; }
 			.tags { display: flex; gap: 0.5em; flex-wrap: wrap; justify-content: center; margin: 0.5em 0 1em; }
 			.tag {
@@ -50,6 +58,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags = [] } = Astro
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
+							{readingTime && <span class="reading-time"> · 약 {readingTime}분 읽기</span>}
 							{updatedDate && (
 								<div class="last-updated-on">
 									Last updated on <FormattedDate date={updatedDate} />
@@ -66,8 +75,11 @@ const { title, description, pubDate, updatedDate, heroImage, tags = [] } = Astro
 						)}
 						<hr />
 					</div>
+					<TableOfContents headings={headings} />
 					<slot />
-					<div class="giscus-wrap">
+					<ShareButtons title={title} url={Astro.url.href} />
+				<RelatedPosts currentSlug={slug} tags={tags} />
+				<div class="giscus-wrap">
 						<script src="https://giscus.app/client.js"
 							data-repo="junbit/junbit-blog"
 							data-repo-id="R_kgDORd2m-A"

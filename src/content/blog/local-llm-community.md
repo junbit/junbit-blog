@@ -1,6 +1,6 @@
 ---
-title: "로컬 LLM 사용자 모임 카카오 오픈채팅방을 만들었습니다"
-description: "로컬 LLM 모델을 직접 돌리는 사람들을 위한 커뮤니티 오픈채팅방 안내"
+title: "로컬 LLM 한국 커뮤니티 - 카카오 오픈채팅방 안내"
+description: "Ollama, MLX, llama.cpp 등 로컬 LLM을 직접 돌리는 한국 사용자를 위한 카카오 오픈채팅 커뮤니티. 모델 추천, 최적화 팁, 삽질 공유."
 pubDate: 2026-03-18
 tags: ["로컬LLM", "커뮤니티", "카카오오픈채팅", "AI"]
 featured: true

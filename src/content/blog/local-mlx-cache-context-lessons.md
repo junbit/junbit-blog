@@ -1,6 +1,6 @@
 ---
-title: "로컬 LLM을 멀티턴으로 굴리며 배운 것들: 캐시, 컨텍스트, 속도, 그리고 착각"
-description: "Mac Mini M4 24GB에서 OpenCode + MLX + Qwen3.5 9B/27B를 직접 운영하며 KV cache, context, prefill, 메모리 한계에 대해 배운 점 정리"
+title: "MLX KV Cache와 컨텍스트 길이 가이드 - Qwen3.5 Mac Mini 실전 경험"
+description: "Mac Mini M4 24GB에서 MLX + Qwen3.5 9B/27B를 멀티턴으로 운영하며 배운 KV cache, context 길이, prefill 속도, 메모리 한계 실전 정리."
 pubDate: 2026-03-23
 tags: ["llm", "mlx", "qwen", "mac-mini", "local-ai", "opencode"]
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Mac Mini 24GB에서 Qwen3.5 27B 로컬 LLM 최적화 (Ollama + Codex CLI)"
-description: "Mac Mini 24GB 환경에서 Qwen3.5 27B 양자화 모델을 안정적으로 실행하기 위한 최적화 과정 정리"
+title: "Qwen3.5 27B Mac Mini 24GB 최적화 가이드 - Ollama 설정과 성능 튜닝"
+description: "Mac Mini M4 24GB에서 Qwen3.5 27B 양자화 모델을 swap 없이 안정 실행하는 Ollama 최적화 방법. 메모리 설정과 Codex CLI 연동까지."
 pubDate: 2026-03-04
 tags: ["llm", "ollama", "qwen", "mac-mini", "local-ai"]
 ---

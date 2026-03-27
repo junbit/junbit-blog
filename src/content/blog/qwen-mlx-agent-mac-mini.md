@@ -1,6 +1,6 @@
 ---
-title: "Ollama보다 3배 빠른 MLX로 Qwen3.5 에이전트 만들기 (Mac Mini 24GB)"
-description: "Mac Mini M4 24GB에서 MLX + Qwen3.5-35B-A3B 3bit로 8.5→59.5 tok/s 달성, 멀티모달 비전까지 지원하는 로컬 AI 에이전트 구축 과정"
+title: "MLX vs Ollama 속도 비교 - Qwen3.5 Mac Mini M4에서 59.5 tok/s 달성"
+description: "Mac Mini M4 24GB에서 MLX + Qwen3.5-35B-A3B 3bit로 Ollama 대비 7배 빠른 59.5 tok/s 달성. 멀티모달 비전 지원 로컬 AI 에이전트 구축 벤치마크."
 pubDate: 2026-03-15
 tags: ["llm", "mlx", "qwen", "mac-mini", "local-ai", "agent"]
 ---

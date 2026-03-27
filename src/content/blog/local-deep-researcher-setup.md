@@ -1,6 +1,6 @@
 ---
-title: "Local Deep Researcher: 로컬 LLM으로 2분 만에 리서치 리포트 뽑기"
-description: "Mac Mini M4에서 Ollama + qwen3.5:9b로 local-deep-researcher를 설치하고, thinking 모델 삽질을 거쳐 CLI 한 줄로 리서치 리포트를 자동 생성하기까지의 과정"
+title: "local-deep-researcher 설치 가이드 - Qwen3.5 9B 로컬 리서치 에이전트"
+description: "Mac Mini M4에서 Ollama + Qwen3.5 9B로 local-deep-researcher를 설치하고, 2분 만에 출처 포함 리서치 리포트를 자동 생성하는 방법."
 pubDate: 2026-03-17
 tags: ["llm", "ollama", "qwen", "langchain", "deep-researcher", "tavily"]
 ---

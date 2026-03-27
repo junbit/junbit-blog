@@ -1,6 +1,6 @@
 ---
-title: "로컬 LLM을 실용적으로 쓰는 사례: 일일 주도주 분석 자동화 시스템 공개"
-description: "qwen3.5:9b 로컬 LLM을 활용해 한국 주식시장 주도주를 자동 분석하고 이메일 리포트로 발송하는 Python 프로젝트를 GitHub에 공개했다."
+title: "Qwen3.5 9B로 주도주 자동 분석 시스템 만들기 - 오픈소스 공개"
+description: "Qwen3.5 9B 로컬 LLM으로 한국 주식시장 KOSPI/KOSDAQ 주도주를 매일 자동 분석하고 이메일 리포트로 발송하는 Python 프로젝트 오픈소스."
 pubDate: 2026-03-24
 tags: ["llm", "qwen", "local-ai", "automation", "python", "stock", "github"]
 ---

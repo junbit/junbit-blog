@@ -10,11 +10,13 @@ interface Props {
 	title: string;
 	description: string;
 	image?: ImageMetadata;
+	pubDate?: Date;
+	updatedDate?: Date;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage } = Astro.props;
+const { title, description, image = FallbackImage, pubDate, updatedDate } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -56,6 +58,29 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<!-- JSON-LD Structured Data -->
+{pubDate && (
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": title,
+		"description": description,
+		"datePublished": pubDate.toISOString(),
+		...(updatedDate && { "dateModified": updatedDate.toISOString() }),
+		"image": new URL(image.src, Astro.site).toString(),
+		"url": canonicalURL.toString(),
+		"author": {
+			"@type": "Person",
+			"name": "junbit",
+			"url": "https://junbit-blog.pages.dev/about"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "junbit.dev"
+		}
+	})} />
+)}
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9JQ8R6E77"></script>
